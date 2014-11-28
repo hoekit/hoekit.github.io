@@ -1,14 +1,12 @@
 ---
 layout: post
-title: Create a standard method to make the JS client apps environment-aware
+title: A simple method to make the JS client apps deployment environment-aware
 ---
 
 When writing client apps, we usually need to connect to the data server.
 However, this connection is typically different for production and test
 environments. This post describes a simple way I've come up with to solve this
 little problem. 
-
-Comments are welcomed.
 
 The client scripts are expecting to read in the environment somehow.
 A JS file reads it in as some variable say:
