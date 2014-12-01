@@ -50,40 +50,42 @@ Note that the sequence is: first load jquery, then the script to check
 
 And below is the template for index.js.
 
-    var app = {
+```javascript
+var app = {
 
-        init: function() {
-            this.bindEvents();
-        },
+    init: function() {
+        this.bindEvents();
+    },
 
-        bindEvents: function () {
-            document.addEventListener('deviceready', this.onDeviceReady, false);
-            this.bindJqmReady();
-        },
+    bindEvents: function () {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+        this.bindJqmReady();
+    },
 
-        onDeviceReady: function() {
-            // Device dependent stuff here e.g. push plugin, etc
-        },
+    onDeviceReady: function() {
+        // Device dependent stuff here e.g. push plugin, etc
+    },
 
-        // Runs or binds functions dependent on jQuery Mobile being ready
-        bindJqmReady: function () {
-             if (jqmReadyDeferred.state() === 'resolved') {
-                app.onJqmReady();
-            } else {
-                $.when(jqmReadyDeferred).then(app.onJqmReady);
-            }
-        },
+    // Runs or binds functions dependent on jQuery Mobile being ready
+    bindJqmReady: function () {
+         if (jqmReadyDeferred.state() === 'resolved') {
+            app.onJqmReady();
+        } else {
+            $.when(jqmReadyDeferred).then(app.onJqmReady);
+        }
+    },
 
-        // jqmReady Event Handler
-        onJqmReady: function () {
-            console.log('JQM is ready');
-            // JQM dependent stuff here 
-        },
-    };
+    // jqmReady Event Handler
+    onJqmReady: function () {
+        console.log('JQM is ready');
+        // JQM dependent stuff here 
+    },
+};
+```
 
 
 ----
 
 #### See Also:
-1. [http://api.jquerymobile.com/mobileinit/]
-2. [http://stackoverflow.com/questions/10945643/correct-way-of-using-jquery-mobile-phonegap-together]
+1. http://api.jquerymobile.com/mobileinit/
+2. http://stackoverflow.com/questions/10945643/correct-way-of-using-jquery-mobile-phonegap-together
