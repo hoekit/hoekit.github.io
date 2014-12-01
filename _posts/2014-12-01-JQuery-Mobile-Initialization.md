@@ -83,6 +83,7 @@ And below is the template for index.js.
 
 
 ----
+
 #### See Also:
 1. http://api.jquerymobile.com/mobileinit/
 2. http://stackoverflow.com/questions/10945643/correct-way-of-using-jquery-mobile-phonegap-together
