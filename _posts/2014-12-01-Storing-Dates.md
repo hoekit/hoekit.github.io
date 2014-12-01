@@ -47,13 +47,13 @@ Perl handles date time in seconds (not milliseconds). The localtime() function
 returns an array in the local timezone. The corresponding gmtime() function
 will return UTC time.
 
-   my $dttm = 1417391472287;
-   my @date = localtime($dttm/1000);
+    my $dttm = 1417391472287;
+    my @date = localtime($dttm/1000);
 
-   my $YMD = sprintf("%04d-%02d-%02d", $date[5]+1900, $date[4]+1, $date[3]);
-   my $hms = sprintf("%02d:%02d:%02d", $date[2], $date[1], $date[0]);
+    my $YMD = sprintf("%04d-%02d-%02d", $date[5]+1900, $date[4]+1, $date[3]);
+    my $hms = sprintf("%02d:%02d:%02d", $date[2], $date[1], $date[0]);
 
-   print "$YMD $hms";       # 2014-12-01 06:51:12
+    print "$YMD $hms";       # 2014-12-01 06:51:12
 
 ----
 See also: 
