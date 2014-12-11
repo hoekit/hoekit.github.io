@@ -3,6 +3,18 @@ layout: post
 title: Naming things
 ---
 
+### userid+timestamp as key for user requests
+
+The proper key for user requests is simply the user ID and timestamp.
+
+In a recent application, the original key chosen reflected some internal data
+such as dates, target accounts, etc because I wanted to prevent inadvertent
+repeat requests. 
+
+This turned out to be clunky and inflexible - what if you want to change some
+of that data? Your key now needs to change. Oops. So, keep the two things
+separate - having a reasonable key and business logic.
+
 ### insert (not add)
 
 To insert means to place an object into some sort of container. So the typical
