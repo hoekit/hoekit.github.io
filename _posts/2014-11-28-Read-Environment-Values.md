@@ -72,3 +72,16 @@ Now, whenever we need to add an environment-specific value, we just open up
 config_all.js and put in the value we need and on the client, it becomes
 accessible.
 
+And then later on, to retrieve the configuration in perl, we do the following:
+
+    use JSON qw/decode_json/;
+
+    my $env = init_environment('config.json');
+    my $dbfile = $env->{dbfile};
+
+    sub init_environment {
+        my $config_file = shift;
+        return decode_json path($config_file)->slurp;
+    }
+
+
