@@ -3,11 +3,12 @@ layout: post
 title: JQuery Mobile and Cordova Initialization with Promises
 ---
 
-An [earlier post][1] described the proper initialization of JQuery Mobile and
-Cordova using $.Deferred of JQuery.
+An [earlier post](http://hoekit.github.io/JQuery-Mobile-Initialization/)
+described the proper initialization of JQuery Mobile and Cordova using
+$.Deferred of JQuery.
 
 This post describes the initialization with Promises using Forbes Lindesay's
-[implementation][2]. It turns out that using promises results in cleaner,
+[implementation](https://www.promisejs.org/). It turns out that using promises results in cleaner,
 simpler code.
 
 ### File: index.html
@@ -65,12 +66,7 @@ Below is the template for index.js:
     };
 
 For more details on Promises, see:
-    1. [Mozilla documentation][3] particularly the "See also" section at the
+    1. [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) particularly the "See also" section at the
     end.
 
-### References
-
-1. http://hoekit.github.io/JQuery-Mobile-Initialization/
-2. https://www.promisejs.org/
-3. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 
